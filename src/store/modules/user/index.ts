@@ -1,6 +1,6 @@
+import { LoginData, getUserInfo, login as userLogin, logout as userLogout } from '@/api/user'
+import { clearToken, setToken } from '@/utils/auth'
 import { defineStore } from 'pinia'
-import { login as userLogin, logout as userLogout, getUserInfo, LoginData } from '@/api/user'
-import { setToken, clearToken } from '@/utils/auth'
 import { UserState } from './types'
 
 const useUserStore = defineStore('user', {
