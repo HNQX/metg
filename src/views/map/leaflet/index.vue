@@ -1,11 +1,56 @@
 <template>
-  <div>hello world leaflet</div>
+  <div :id="props.id" class="map"></div>
 </template>
 
 <script setup>
-import { onMounted } from 'vue';
+import L from 'leaflet';
+import 'leaflet/dist/leaflet.css';
+import { onMounted, reactive } from 'vue';
+
+const me = reactive({ map: null, group: {} })
+const props = defineProps({
+  id: { type: String, default: 'map' },
+})
+
+const addCustomMap = () => {
+  const NAME_LAYER = 'chinaosm:osm'
+
+  const wmsLayer = L.tileLayer.wms(`/mapServer/geoserver/${NAME_LAYER.split(':').shift()}/wms`, {
+    // 'http://52152121.xyz:8081/geoserver/osm/wms', {
+    // layers: 'osm:osm_defualt_0',
+    layers: NAME_LAYER,
+    format: 'image/png',
+    transparent: true,
+    // tilesOrigin: '8155154.5,1779369',
+    styles: 'blue',
+  })
+
+  me.map.addLayer(wmsLayer)
+
+  me.map.invalidateSize(true)
+}
+
+const addMarker = () => {
+  L.marker([31.3, 120.6]).addTo(me.map)
+}
 
 onMounted(() => {
-  console.log('leaflet')
+  me.map = L.map(props.id, {
+    center: [31.3, 120.6],
+    zoom: 11,
+  })
+
+  addCustomMap()
+  addMarker()
 })
 </script>
+
+<style lang="less" scoped>
+.map {
+  height: 100%;
+  width: 100%;
+}
+.leaflet-container {
+  background: #4952a0;
+}
+</style>

@@ -11,6 +11,13 @@ export default mergeConfig(
       fs: {
         strict: true,
       },
+      proxy: {
+        '/mapServer': {
+          target: 'https://52152121.xyz:8082',
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/mapServer/, ''),
+        },
+      },
     },
     plugins: [
       eslint({

@@ -5,7 +5,7 @@ export default {
   meta: {
     locale: 'menu.map',
     requiresAuth: true,
-    icon: 'icon-map',
+    icon: 'icon-tiktok-color',
   },
   children: [
     {
