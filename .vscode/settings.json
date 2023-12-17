@@ -51,5 +51,5 @@
   "path-intellisense.mappings": {
     "@": "${workspaceRoot}/src"
   },
-  "files.eol": "\n"
+  "files.eol": "auto"
 }
