@@ -150,11 +150,11 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed, ref, reactive } from 'vue'
-import { useI18n } from 'vue-i18n'
+import { PolicyParams, PolicyRecord, queryPolicyList } from '@/api/list'
 import useLoading from '@/hooks/loading'
-import { queryPolicyList, PolicyRecord, PolicyParams } from '@/api/list'
-import { Pagination, Options } from '@/types/global'
+import { Options, Pagination } from '@/types/global'
+import { computed, defineComponent, reactive, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 const generateFormModel = () => {
   return {

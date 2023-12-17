@@ -3,6 +3,7 @@ import Dashboard from './dashboard'
 import Exception from './exception'
 import Form from './form'
 import List from './list'
+import Map from './map'
 import Profile from './profile'
 import Result from './result'
 import User from './user'
@@ -19,5 +20,6 @@ export default [
   Result,
   Exception,
   User,
+  Map,
   /** simple end */
 ]
