@@ -1,12 +1,12 @@
 import Dashboard from './dashboard'
 /** simple */
-import List from './list'
-import Form from './form'
-import Profile from './profile'
-import Visualization from './visualization'
-import Result from './result'
 import Exception from './exception'
+import Form from './form'
+import List from './list'
+import Profile from './profile'
+import Result from './result'
 import User from './user'
+import Visualization from './visualization'
 /** simple end */
 
 export default [
