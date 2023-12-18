@@ -1,5 +1,5 @@
-import { defineStore } from 'pinia'
 import defaultSettings from '@/config/settings.json'
+import { defineStore } from 'pinia'
 import { AppState } from './types'
 
 const useAppStore = defineStore('app', {

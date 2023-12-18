@@ -1,5 +1,5 @@
-import axios from 'axios'
 import { GeneralChart } from '@/types/global'
+import axios from 'axios'
 
 export interface ChartDataRecord {
   x: string

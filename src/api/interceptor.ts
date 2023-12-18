@@ -1,6 +1,6 @@
-import axios from 'axios'
-import { Message, Modal } from '@arco-design/web-vue'
 import { useUserStore } from '@/store'
+import { Message, Modal } from '@arco-design/web-vue'
+import axios from 'axios'
 
 export interface HttpResponse<T = unknown> {
   status: number

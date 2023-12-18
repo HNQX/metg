@@ -1,6 +1,6 @@
+import { Options } from '@/types/global'
 import axios from 'axios'
 import qs from 'query-string'
-import { Options } from '@/types/global'
 
 export interface PolicyRecord {
   id: string

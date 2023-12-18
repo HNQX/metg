@@ -31,9 +31,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import { queryMyTeamList, MyTeamRecord } from '@/api/user-center'
+import { MyTeamRecord, queryMyTeamList } from '@/api/user-center'
 import useRequest from '@/hooks/request'
+import { defineComponent } from 'vue'
 
 export default defineComponent({
   setup() {

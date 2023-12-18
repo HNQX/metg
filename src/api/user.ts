@@ -1,5 +1,5 @@
-import axios from 'axios'
 import { UserState } from '@/store/modules/user/types'
+import axios from 'axios'
 
 export interface LoginData {
   username: string
