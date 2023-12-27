@@ -18,14 +18,20 @@
               </a-col>
               <a-col :span="8">
                 <a-form-item field="contentType" :label="$t('searchTable.form.contentType')">
-                  <a-select v-model="formModel.contentType" :options="contentTypeOptions"
-                    :placeholder="$t('searchTable.form.selectDefault')" />
+                  <a-select
+                    v-model="formModel.contentType"
+                    :options="contentTypeOptions"
+                    :placeholder="$t('searchTable.form.selectDefault')"
+                  />
                 </a-form-item>
               </a-col>
               <a-col :span="8">
                 <a-form-item field="filterType" :label="$t('searchTable.form.filterType')">
-                  <a-select v-model="formModel.filterType" :options="filterTypeOptions"
-                    :placeholder="$t('searchTable.form.selectDefault')" />
+                  <a-select
+                    v-model="formModel.filterType"
+                    :options="filterTypeOptions"
+                    :placeholder="$t('searchTable.form.selectDefault')"
+                  />
                 </a-form-item>
               </a-col>
               <a-col :span="8">
@@ -35,8 +41,7 @@
               </a-col>
               <a-col :span="8">
                 <a-form-item field="status" :label="$t('searchTable.form.status')">
-                  <a-select v-model="formModel.status" :options="statusOptions"
-                    :placeholder="$t('searchTable.form.selectDefault')" />
+                  <a-select v-model="formModel.status" :options="statusOptions" :placeholder="$t('searchTable.form.selectDefault')" />
                 </a-form-item>
               </a-col>
             </a-row>
@@ -88,8 +93,7 @@
           </a-button>
         </a-col>
       </a-row>
-      <a-table row-key="_id" :loading="loading" :pagination="pagination" :data="renderData" :bordered="false"
-        @page-change="onPageChange">
+      <a-table row-key="_id" :loading="loading" :pagination="pagination" :data="renderData" :bordered="false" @page-change="onPageChange">
         <template #columns>
           <a-table-column :title="$t('table.form.id')" data-index="_id" />
           <a-table-column :title="$t('table.form.username')" data-index="username" />
@@ -159,7 +163,7 @@ const generateFormModel = () => {
   }
 }
 const formModel = ref(generateFormModel())
-const fetchData = async (params = { username: 'han' }) => {
+const fetchData = async (params = 'linshi') => {
   setLoading(true)
   try {
     const { data } = await getUrl(params)

@@ -21,6 +21,6 @@ export function getUserInfo() {
   return axios.post<UserState>('/api/user/info')
 }
 
-export function getUrl(data: { username: string }) {
-  return axios.post('api_url/v1/short/getCodeWithUser', data)
+export function getUrl(username: string) {
+  return axios.post('/api_url/v1/short/getCodeWithUser', { username })
 }
