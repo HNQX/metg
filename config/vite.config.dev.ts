@@ -17,10 +17,10 @@ export default mergeConfig(
           changeOrigin: true,
           rewrite: (path) => path.replace(/^\/mapServer/, ''),
         },
-        '/api_url': {
+        '/url': {
           target: 'https://url3.fun',
           changeOrigin: true,
-          rewrite: (path) => path.replace(/^\/api_url/, ''),
+          rewrite: (path) => path.replace(/^\/url/, ''),
         },
       },
     },
