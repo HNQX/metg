@@ -26,6 +26,8 @@ import locale500 from '@/views/exception/500/locale/zh-CN'
 import localeUserInfo from '@/views/user/info/locale/zh-CN'
 import localeUserSetting from '@/views/user/setting/locale/zh-CN'
 /** simple end */
+import localeAccountBuy from '@/views/account/buy/locale/zh-CN'
+import localeAccountManage from '@/views/account/manage/locale/zh-CN'
 import localeMapEarth from '@/views/map/earth/locale/zh-CN'
 import localeMapLeaflet from '@/views/map/leaflet/locale/zh-CN'
 import localeSettings from './zh-CN/settings'
@@ -33,6 +35,7 @@ import localeSettings from './zh-CN/settings'
 export default {
   'menu.dashboard': '仪表盘',
   'menu.list': '列表页',
+  'menu.account': '账号页',
   'menu.map': '地图页',
   'menu.result': '结果页',
   'menu.exception': '异常页',
@@ -43,6 +46,8 @@ export default {
   'navbar.docs': '文档中心',
   'navbar.action.locale': '切换为中文',
 
+  ...localeAccountManage,
+  ...localeAccountBuy,
   ...localeMapLeaflet,
   ...localeMapEarth,
   ...localeSettings,

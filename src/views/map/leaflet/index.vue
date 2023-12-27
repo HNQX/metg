@@ -20,6 +20,14 @@ const props = defineProps({
   id: { type: String, default: 'map' },
 })
 
+document.onkeydown = (e) => {
+  if (e.ctrlKey) {
+    if (e.key === 'z') {
+      // me.map.invalidateSize(true)
+    }
+  }
+}
+
 const addCustomMap = () => {
   const NAME_LAYER = 'chinaosm:osm'
 
@@ -35,7 +43,7 @@ const addCustomMap = () => {
 
   me.map.addLayer(wmsLayer)
 
-  me.map.invalidateSize(true)
+  setTimeout(() => me.map.invalidateSize(true), 0)
 }
 
 const addMarker = () => {
@@ -58,6 +66,7 @@ onMounted(() => {
   height: 100%;
   width: 100%;
 }
+
 .leaflet-container {
   background: #4952a0;
 }

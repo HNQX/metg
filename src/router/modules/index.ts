@@ -1,5 +1,6 @@
 import Dashboard from './dashboard'
 /** simple */
+import Account from './account'
 import Exception from './exception'
 import Form from './form'
 import List from './list'
@@ -21,5 +22,6 @@ export default [
   Exception,
   User,
   Map,
+  Account,
   /** simple end */
 ]
