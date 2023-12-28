@@ -18,7 +18,7 @@ export default mergeConfig(
           rewrite: (path) => path.replace(/^\/mapServer/, ''),
         },
         '/url': {
-          target: 'https://url3.fun',
+          target: 'http://192.168.31.12:802',
           changeOrigin: true,
           rewrite: (path) => path.replace(/^\/url/, ''),
         },

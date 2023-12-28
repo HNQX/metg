@@ -22,5 +22,6 @@ export function getUserInfo() {
 }
 
 export function getUrl(username: string) {
-  return axios.post('/url/v1/short/getCodeWithUser', { username })
+  // return axios.post('/url/v1/short/getCodeWithUser', { username })
+  return axios({ method: 'post', url: '/url/v1/short/getCodeWithUser', params: { username } })
 }
